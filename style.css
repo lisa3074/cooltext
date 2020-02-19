@@ -1,0 +1,43 @@
+:root {
+  --delay: 0.1s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#cooltext {
+  padding-left: 2rem;
+}
+
+span {
+  transform: translateY(100vh);
+  display: inline-block;
+}
+
+.fade_in {
+  animation-name: fade_in_kf;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.17, 0.67, 1, 0.29);
+  animation-fill-mode: forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes fade_in_kf {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(3vh);
+  }
+  95% {
+    transform: translateY(6vh);
+  }
+  100% {
+    transform: translateY(5vh);
+  }
+}
